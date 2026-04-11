@@ -839,6 +839,125 @@
 
   .hero-inner { position: relative; z-index: 1; }
 
+  /* ACHIEVEMENT BANNER */
+  .achievement-banner {
+    background: var(--bg2);
+    border: 1px solid rgba(255,153,0,0.25);
+    padding: 1.75rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+  }
+
+  .achievement-banner::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 3px;
+    background: #ff9900;
+  }
+
+  .achievement-banner::after {
+    content: 'AMAZON ML CHALLENGE 2025';
+    position: absolute;
+    right: -30px; top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+    font-size: 9px;
+    letter-spacing: 0.3em;
+    color: rgba(255,153,0,0.08);
+    font-weight: 700;
+    white-space: nowrap;
+    pointer-events: none;
+  }
+
+  .achievement-banner:hover {
+    border-color: rgba(255,153,0,0.5);
+    transform: translateY(-2px);
+  }
+
+  .ach-left {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+    flex: 1;
+  }
+
+  .ach-logo {
+    width: 52px; height: 52px;
+    border-radius: 8px;
+    background: rgba(255,153,0,0.1);
+    border: 1px solid rgba(255,153,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    animation: floatY 3s ease-in-out infinite;
+  }
+
+  .ach-label {
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #ff9900;
+    margin-bottom: 0.2rem;
+    opacity: 0.8;
+  }
+
+  .ach-title {
+    font-family: var(--display);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 0.4rem;
+    letter-spacing: -0.5px;
+  }
+
+  .ach-desc {
+    font-size: 12px;
+    color: var(--muted2);
+    line-height: 1.8;
+    max-width: 500px;
+  }
+
+  .ach-highlight {
+    color: #ff9900;
+    font-weight: 700;
+  }
+
+  .ach-stat {
+    text-align: center;
+    flex-shrink: 0;
+    padding: 1rem 1.5rem;
+    border-left: 1px solid var(--border);
+  }
+
+  .ach-rank {
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 0.1rem;
+  }
+
+  .ach-pct {
+    font-family: var(--display);
+    font-size: 52px;
+    font-weight: 800;
+    color: #ff9900;
+    line-height: 1;
+  }
+
+  .ach-meta {
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 0.3rem;
+    letter-spacing: 0.08em;
+  }
+
   /* COUNTER */
   .counter { display: inline-block; }
 
@@ -886,7 +1005,7 @@
     <li><a href="#cp">CP</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="mailto:rajaryan0734@gmail.com" class="nav-cta">Hire Me ↗</a></li>
+    <li><a href="/cdn-cgi/l/email-protection#ec9e8d868d9e958d82dcdbdfd8ac8b818d8580c28f8381" class="nav-cta">Hire Me ↗</a></li>
   </ul>
 </nav>
 
@@ -898,6 +1017,7 @@
       <div class="hero-eyebrow">
         <div class="badge"><div class="badge-dot"></div> Open to Internships &amp; PPO</div>
         <div class="badge badge-blue">NITK · 2026</div>
+        <div class="badge" style="background:rgba(255,153,0,0.08);border-color:rgba(255,153,0,0.25);color:#ff9900;">🏆 Amazon ML · Top 10%</div>
       </div>
 
       <h1 class="hero-name">
@@ -918,7 +1038,7 @@
 
       <div class="btn-row">
         <a href="#projects" class="btn btn-primary">View Projects →</a>
-        <a href="mailto:rajaryan0734@gmail.com" class="btn">Get in Touch</a>
+        <a href="/cdn-cgi/l/email-protection#582a3932392a213936686f6b6c183f35393134763b3735" class="btn">Get in Touch</a>
         <a href="https://github.com/RAJ-ARYAN-NITK" target="_blank" class="btn">GitHub ↗</a>
         <a href="https://linkedin.com/in/raj-aryan-55935b27a" target="_blank" class="btn">LinkedIn ↗</a>
       </div>
@@ -945,7 +1065,7 @@
         &nbsp;&nbsp;<span class="ts">"System Design"</span><br>
         ]<br><br>
         <span class="tk">seeking</span> = <span class="ts">"Internship / PPO"</span><br>
-        <span class="tk">email</span>   = <span class="ts">"rajaryan0734@gmail.com"</span><br><br>
+        <span class="tk">email</span>   = <span class="ts">"<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="8dffece7ecfff4ece3bdbabeb9cdeae0ece4e1a3eee2e0">[email&#160;protected]</a>"</span><br><br>
         <span style="color:#555">&gt;&gt;&gt; </span><span style="color:var(--text)">print(forte[0])</span><br>
         <span id="typed-output" style="color:var(--accent)"></span><span class="cursor"></span>
       </div>
@@ -1132,6 +1252,27 @@
     </div>
   </div>
 
+  <!-- Amazon ML Challenge Achievement -->
+  <div class="achievement-banner appear" style="margin-bottom:1rem;">
+    <div class="ach-left">
+      <div class="ach-logo">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#ff9900" stroke="#ff9900" stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div>
+        <div class="ach-label">Achievement · 2025</div>
+        <div class="ach-title">Amazon ML Challenge</div>
+        <div class="ach-desc">Ranked in the <span class="ach-highlight">Top 10%</span> nationwide among thousands of participants — building and optimizing machine learning models under competitive constraints.</div>
+      </div>
+    </div>
+    <div class="ach-stat">
+      <div class="ach-rank">Top</div>
+      <div class="ach-pct">10<span style="font-size:28px">%</span></div>
+      <div class="ach-meta">Nationwide</div>
+    </div>
+  </div>
+
   <div style="background:var(--bg2); border:1px solid var(--border); padding:1.25rem 1.5rem; font-size:12.5px; color:var(--muted2); display:flex; align-items:center; gap:1rem;">
     <span style="color:var(--accent); font-size:18px;">⚡</span>
     Actively practicing DSA — applying algorithms in competitive programming and real production systems simultaneously.
@@ -1252,11 +1393,11 @@
     </div>
 
     <div class="contact-links stagger">
-      <a href="mailto:rajaryan0734@gmail.com" class="clink">
+      <a href="/cdn-cgi/l/email-protection#5321323932212a323d6364606713343e323a3f7d303c3e" class="clink">
         <div class="clink-icon ci-green">✉</div>
         <div>
           <div class="clink-label">Email</div>
-          <div class="clink-val">rajaryan0734@gmail.com</div>
+          <div class="clink-val"><span class="__cf_email__" data-cfemail="d8aab9b2b9aaa1b9b6e8efebec98bfb5b9b1b4f6bbb7b5">[email&#160;protected]</span></div>
         </div>
         <div class="clink-arrow">↗</div>
       </a>
@@ -1313,7 +1454,7 @@
 </div>
 </div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 /* ── SCROLL PROGRESS ── */
 const bar = document.getElementById('scroll-progress');
 window.addEventListener('scroll', () => {
@@ -1388,17 +1529,4 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 });
 
 /* ── NAV ACTIVE STATE ── */
-const sections = document.querySelectorAll('section, [id]');
-const navLinks = document.querySelectorAll('.nav-links a');
-window.addEventListener('scroll', () => {
-  let current = '';
-  document.querySelectorAll('[id]').forEach(s => {
-    if (window.scrollY >= s.offsetTop - 120) current = s.id;
-  });
-  navLinks.forEach(a => {
-    a.style.color = a.getAttribute('href') === '#' + current ? 'var(--accent)' : '';
-  });
-}, { passive: true });
-</script>
-</body>
-</html>
+con
