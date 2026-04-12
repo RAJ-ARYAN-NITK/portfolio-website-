@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Raj Aryan — Backend Engineer · NITK</title>
-<meta name="description" content="Raj Aryan — Backend Engineer from NITK. Building systems with FastAPI, Kafka, and Python. Open to internships and PPO.">
+<title>Raj Aryan — Full Stack Engineer · NITK</title>
+<meta name="description" content="Raj Aryan — Full Stack Engineer from NITK. Building systems with FastAPI, Kafka, Next.js and Python. Open to opportunities.">
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -38,12 +38,10 @@
 
   a { color: inherit; text-decoration: none; }
 
-  /* SCROLLBAR */
   ::-webkit-scrollbar { width: 4px; }
   ::-webkit-scrollbar-track { background: var(--bg); }
   ::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 2px; }
 
-  /* SCROLL PROGRESS BAR */
   #scroll-progress {
     position: fixed;
     top: 0; left: 0;
@@ -54,7 +52,6 @@
     transition: width 0.1s linear;
   }
 
-  /* NAV */
   nav {
     position: fixed;
     top: 0; left: 0; right: 0;
@@ -70,9 +67,7 @@
     animation: slideDown 0.6s ease 0.2s forwards;
   }
 
-  @keyframes slideDown {
-    to { transform: translateY(0); }
-  }
+  @keyframes slideDown { to { transform: translateY(0); } }
 
   .nav-logo {
     font-family: var(--display);
@@ -129,14 +124,12 @@
   .nav-cta:hover { background: var(--accent); color: #000 !important; }
   .nav-cta::after { display: none !important; }
 
-  /* WRAPPER */
   .wrap {
     max-width: 1180px;
     margin: 0 auto;
     padding: 0 5vw;
   }
 
-  /* HERO */
   .hero {
     min-height: 100vh;
     display: flex;
@@ -163,6 +156,7 @@
     margin-bottom: 1.5rem;
     opacity: 0;
     animation: fadeUp 0.6s ease 0.5s forwards;
+    flex-wrap: wrap;
   }
 
   .badge {
@@ -284,7 +278,6 @@
   .btn-primary:hover { background: #00cc6a; border-color: #00cc6a; color: #000; }
   .btn-primary::before { display: none; }
 
-  /* TERMINAL */
   .terminal {
     background: var(--bg2);
     border: 1px solid var(--border);
@@ -295,9 +288,7 @@
     box-shadow: 0 0 40px rgba(0,232,122,0.04);
     transition: box-shadow 0.3s ease;
   }
-  .terminal:hover {
-    box-shadow: 0 0 60px rgba(0,232,122,0.08);
-  }
+  .terminal:hover { box-shadow: 0 0 60px rgba(0,232,122,0.08); }
 
   .term-bar {
     background: var(--bg3);
@@ -340,7 +331,6 @@
 
   @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
 
-  /* SECTION */
   .section {
     padding: 6rem 0;
     border-bottom: 1px solid var(--border);
@@ -378,7 +368,6 @@
 
   .sec-line.in { transform: scaleX(1); }
 
-  /* PROJECTS */
   .proj-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -440,6 +429,12 @@
     background: rgba(255,107,53,0.08);
     border-color: rgba(255,107,53,0.15);
     color: var(--accent3);
+  }
+
+  .proj-tag.purple {
+    background: rgba(180,142,247,0.08);
+    border-color: rgba(180,142,247,0.15);
+    color: #b48ef7;
   }
 
   .proj-name {
@@ -530,7 +525,6 @@
   .cb-key { color: var(--accent2); }
   .cb-val { color: var(--muted2); }
 
-  /* COMPETITIVE */
   .cp-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -604,7 +598,6 @@
     font-style: italic;
   }
 
-  /* SKILLS */
   .skills-wrap {
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -649,15 +642,10 @@
   .sk-fill[data-color="orange"] { background: var(--accent3); }
   .sk-fill[data-color="blue"] { background: var(--accent2); }
 
-  /* EDUCATION */
   .edu-card {
     background: var(--bg2);
     border: 1px solid var(--border);
     padding: 2rem;
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 2rem;
-    align-items: center;
     margin-bottom: 1rem;
   }
 
@@ -681,21 +669,6 @@
     border-radius: 2px;
   }
 
-  .edu-gpa {
-    text-align: right;
-  }
-
-  .gpa-val {
-    font-family: var(--display);
-    font-size: 42px;
-    font-weight: 800;
-    color: var(--accent);
-    line-height: 1;
-  }
-
-  .gpa-label { font-size: 11px; color: var(--muted); margin-top: 0.25rem; }
-
-  /* CONTACT */
   .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -758,7 +731,6 @@
   .clink-val { font-size: 13px; color: var(--text); margin-top: 1px; }
   .clink-arrow { margin-left: auto; color: var(--muted); font-size: 12px; transition: all 0.25s; z-index: 1; }
 
-  /* FOOTER */
   .footer {
     padding: 2rem 0;
     display: flex;
@@ -783,7 +755,6 @@
     animation: pulse 2s ease-in-out infinite;
   }
 
-  /* ANIMATIONS */
   @keyframes pulse {
     0%,100% { opacity:1; transform:scale(1); }
     50% { opacity:0.4; transform:scale(0.7); }
@@ -804,7 +775,6 @@
     50% { transform: translateY(-6px); }
   }
 
-  /* APPEAR */
   .appear {
     opacity: 0;
     transform: translateY(20px);
@@ -812,7 +782,6 @@
   }
   .appear.in { opacity: 1; transform: translateY(0); }
 
-  /* STAGGERED CHILDREN */
   .stagger > * {
     opacity: 0;
     transform: translateY(16px);
@@ -824,7 +793,6 @@
   .stagger.in > *:nth-child(4) { opacity: 1; transform: translateY(0); transition-delay: 0.35s; }
   .stagger.in > *:nth-child(5) { opacity: 1; transform: translateY(0); transition-delay: 0.45s; }
 
-  /* GRID BACKGROUND */
   .hero::before {
     content: '';
     position: absolute;
@@ -839,7 +807,6 @@
 
   .hero-inner { position: relative; z-index: 1; }
 
-  /* ACHIEVEMENT BANNER */
   .achievement-banner {
     background: var(--bg2);
     border: 1px solid rgba(255,153,0,0.25);
@@ -923,10 +890,7 @@
     max-width: 500px;
   }
 
-  .ach-highlight {
-    color: #ff9900;
-    font-weight: 700;
-  }
+  .ach-highlight { color: #ff9900; font-weight: 700; }
 
   .ach-stat {
     text-align: center;
@@ -958,10 +922,8 @@
     letter-spacing: 0.08em;
   }
 
-  /* COUNTER */
   .counter { display: inline-block; }
 
-  /* DIVIDER */
   .divider {
     height: 1px;
     background: var(--border);
@@ -969,10 +931,7 @@
     margin: 0 auto;
   }
 
-  /* GLITCH on name hover */
-  .hero-name:hover .accent {
-    animation: glitch 0.4s ease;
-  }
+  .hero-name:hover .accent { animation: glitch 0.4s ease; }
 
   @keyframes glitch {
     0%   { text-shadow: none; }
@@ -983,14 +942,34 @@
     100% { text-shadow: none; }
   }
 
+  /* Metrics row for SDoH */
+  .metrics-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .metric-box {
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    padding: 0.6rem 0.75rem;
+    text-align: center;
+  }
+
+  .metric-label { font-size: 9px; letter-spacing: 0.12em; color: var(--muted); text-transform: uppercase; margin-bottom: 0.15rem; }
+  .metric-val { font-size: 15px; font-weight: 700; font-family: var(--display); color: var(--accent); }
+  .metric-val.blue { color: var(--accent2); }
+  .metric-val.dim { color: var(--accent3); }
+
   @media (max-width: 768px) {
     .hero-inner, .proj-card.span2, .cp-grid, .skills-wrap, .contact-grid { grid-template-columns: 1fr; }
     .proj-grid { grid-template-columns: 1fr; }
     .proj-card.span2 { grid-column: span 1; }
     .edu-card { grid-template-columns: 1fr; }
-    .edu-gpa { text-align: left; }
     nav { padding: 1rem 1.5rem; }
     .nav-links { gap: 1rem; }
+    .metrics-row { grid-template-columns: repeat(2, 1fr); }
   }
 </style>
 </head>
@@ -1014,8 +993,8 @@
   <div class="hero-inner">
     <div>
       <div class="hero-eyebrow">
-        <div class="badge"><div class="badge-dot"></div> Open to Internships &amp; PPO</div>
-        <div class="badge badge-blue">NITK · 2026</div>
+        <div class="badge"><div class="badge-dot"></div> Open to Opportunities</div>
+        <div class="badge badge-blue">NITK · 2027</div>
         <div class="badge" style="background:rgba(255,153,0,0.08);border-color:rgba(255,153,0,0.25);color:#ff9900;">🏆 Amazon ML · Top 10%</div>
       </div>
 
@@ -1024,15 +1003,15 @@
       </h1>
 
       <p class="hero-subtitle">
-        <strong>Backend Engineer</strong> from NIT Karnataka.<br>
-        Building production systems with FastAPI, Kafka &amp; PostgreSQL.<br>
-        Metallurgy → CS. Following curiosity.
+        <strong>Full Stack Developer</strong> from NIT Karnataka.<br>
+        Building end-to-end systems with FastAPI, Kafka, Next.js &amp; PostgreSQL.<br>
+        Following curiosity. Shipping real things.
       </p>
 
       <div class="hero-meta">
         <div class="meta-item">📍 <span>Surathkal, Karnataka</span></div>
-        <div class="meta-item">🎓 <span>B.Tech · Metallurgy · NITK</span></div>
-        <div class="meta-item">⭐ <span>GPA 7.83 / 10</span></div>
+        <div class="meta-item">🎓 <span>B.Tech · NITK · 2027</span></div>
+        <div class="meta-item">💻 <span>Backend + Frontend</span></div>
       </div>
 
       <div class="btn-row">
@@ -1054,16 +1033,15 @@
         <span class="tc"># profile.py — Raj Aryan</span><br><br>
         <span class="tk">name</span>     = <span class="ts">"Raj Aryan"</span><br>
         <span class="tk">college</span>  = <span class="ts">"NIT Karnataka"</span><br>
-        <span class="tk">branch</span>   = <span class="ts">"Metallurgy Engg"</span><br>
-        <span class="tk">year</span>     = <span class="tn">3</span>  <span class="tc"># Junior</span><br>
-        <span class="tk">gpa</span>      = <span class="tn">7.83</span><br><br>
+        <span class="tk">role</span>     = <span class="ts">"Full Stack Developer"</span><br>
+        <span class="tk">year</span>     = <span class="tn">3</span>  <span class="tc"># Junior</span><br><br>
         <span class="tk">forte</span> = [<br>
         &nbsp;&nbsp;<span class="ts">"FastAPI"</span>, <span class="ts">"Kafka"</span>,<br>
         &nbsp;&nbsp;<span class="ts">"PostgreSQL"</span>, <span class="ts">"Docker"</span>,<br>
-        &nbsp;&nbsp;<span class="ts">"Python"</span>, <span class="ts">"Next.js"</span>,<br>
+        &nbsp;&nbsp;<span class="ts">"Next.js"</span>, <span class="ts">"TypeScript"</span>,<br>
         &nbsp;&nbsp;<span class="ts">"System Design"</span><br>
         ]<br><br>
-        <span class="tk">seeking</span> = <span class="ts">"Internship / PPO"</span><br>
+        <span class="tk">seeking</span> = <span class="ts">"Full Stack Opportunities"</span><br>
         <span class="tk">email</span>   = <span class="ts">"rajaryan0734@gmail.com"</span><br><br>
         <span style="color:#555">&gt;&gt;&gt; </span><span style="color:var(--text)">print(forte[0])</span><br>
         <span id="typed-output" style="color:var(--accent)"></span><span class="cursor"></span>
@@ -1087,13 +1065,15 @@
 
     <div class="proj-card span2 appear">
       <div>
-        <span class="proj-tag">⭐ Featured · Backend Systems</span>
-        <h3 class="proj-name">Delivery Routing System</h3>
+        <span class="proj-tag">⭐ Featured · Full Stack</span>
+        <h3 class="proj-name">martensite</h3>
+        <p style="font-size:11.5px; color:var(--accent); margin-bottom:0.75rem; font-style:italic; letter-spacing:0.02em;">
+          A production-grade delivery routing backend inspired by Swiggy/Zomato — built with FastAPI, Kafka, Supabase, and Next.js.
+        </p>
         <p class="proj-desc">
-          Production-grade food delivery backend inspired by Swiggy &amp; Zomato.
           Real-time driver assignment using Min Heap, surge pricing via Sliding Window,
           route optimization with TSP algorithm, and event-driven architecture with Kafka.
-          Full JWT auth, WebSocket GPS streaming, and Next.js dashboard.
+          Full JWT auth, WebSocket GPS streaming, and Next.js dashboard frontend.
         </p>
         <div class="stack">
           <span class="chip">FastAPI</span>
@@ -1144,24 +1124,67 @@
       <span class="proj-tag blue">Machine Learning · Research</span>
       <h3 class="proj-name">SDoH-ER-Predictor</h3>
       <p class="proj-desc">
-        Forecasts county-level unemployment as a public health stress indicator
-        across 11 Massachusetts counties using 10 years of BLS employment and CPI data.
-        XGBoost achieving R²=0.9998, alongside LSTM and SHA models.
+        Streamlit dashboard comparing XGBoost vs LSTM for forecasting county-level unemployment
+        as a public health stress indicator. Trained on 10 years of BLS employment &amp; CPI data
+        across 11 Massachusetts counties (2015–2024). 1320 test samples, 28 features,
+        with Per-County Analysis, SHAP Explainability, and Residuals visualisation.
       </p>
+      <div class="metrics-row">
+        <div class="metric-box">
+          <div class="metric-label">XGBoost R²</div>
+          <div class="metric-val">0.6005</div>
+        </div>
+        <div class="metric-box">
+          <div class="metric-label">XGBoost MAE</div>
+          <div class="metric-val blue">0.3497</div>
+        </div>
+        <div class="metric-box">
+          <div class="metric-label">LSTM R²</div>
+          <div class="metric-val dim">−0.0027</div>
+        </div>
+      </div>
       <div class="stack">
         <span class="chip">Python</span>
         <span class="chip">XGBoost</span>
         <span class="chip">LSTM</span>
+        <span class="chip">Streamlit</span>
         <span class="chip">Pandas</span>
         <span class="chip">Scikit-learn</span>
+        <span class="chip">SHAP</span>
         <span class="chip">BLS Data</span>
-      </div>
-      <div style="padding: 0.75rem 1rem; background: rgba(0,232,122,0.05); border: 1px solid rgba(0,232,122,0.1); margin-bottom: 1rem; font-size: 12px;">
-        <span style="color:var(--accent);">R² = 0.9998</span>
-        <span style="color:var(--muted2); margin-left:1rem;">XGBoost · 10yr forecast</span>
       </div>
       <div class="proj-links">
         <a href="https://github.com/RAJ-ARYAN-NITK/SDoH-ER-Predictor" target="_blank" class="plink">↗ GitHub</a>
+        <a href="#" class="plink">↗ Streamlit App</a>
+      </div>
+    </div>
+
+    <div class="proj-card appear">
+      <span class="proj-tag purple">Full Stack · Finance</span>
+      <h3 class="proj-name">el_cepos</h3>
+      <p class="proj-desc">
+        Full-stack stock market dashboard with real-time price fetching, custom price alerts,
+        multi-stock comparison charts, and a personalised watchlist. Built with Next.js App Router,
+        Prisma ORM, and Clerk authentication — showcasing end-to-end product development
+        from database schema to polished UI.
+      </p>
+      <div class="stack">
+        <span class="chip">Next.js</span>
+        <span class="chip">TypeScript</span>
+        <span class="chip">Prisma</span>
+        <span class="chip">Clerk Auth</span>
+        <span class="chip">Context API</span>
+        <span class="chip">Stock APIs</span>
+        <span class="chip">Area Charts</span>
+      </div>
+      <div style="padding: 0.6rem 1rem; background: rgba(180,142,247,0.05); border: 1px solid rgba(180,142,247,0.15); margin-bottom: 1rem; font-size: 12px; display:flex; gap:1.5rem; flex-wrap:wrap;">
+        <span style="color:#b48ef7;">📈 Live Price Feeds</span>
+        <span style="color:var(--muted2);">🔔 Price Alerts</span>
+        <span style="color:var(--muted2);">⭐ Watchlist</span>
+        <span style="color:var(--muted2);">📊 Comparison</span>
+      </div>
+      <div class="proj-links">
+        <a href="https://github.com/RAJ-ARYAN-NITK/el_cepos" target="_blank" class="plink">↗ GitHub</a>
       </div>
     </div>
 
@@ -1302,16 +1325,16 @@
       <div class="sk">PostgreSQL <div class="sk-bar"><div class="sk-fill" data-width="83" data-color="orange"></div></div></div>
       <div class="sk">Apache Kafka <div class="sk-bar"><div class="sk-fill" data-width="76" data-color="orange"></div></div></div>
       <div class="sk">Docker <div class="sk-bar"><div class="sk-fill" data-width="80" data-color="orange"></div></div></div>
-      <div class="sk">Redis <div class="sk-bar"><div class="sk-fill" data-width="70" data-color="orange"></div></div></div>
-      <div class="sk">Supabase <div class="sk-bar"><div class="sk-fill" data-width="78" data-color="orange"></div></div></div>
+      <div class="sk">Prisma ORM <div class="sk-bar"><div class="sk-fill" data-width="78" data-color="orange"></div></div></div>
+      <div class="sk">Supabase <div class="sk-bar"><div class="sk-fill" data-width="76" data-color="orange"></div></div></div>
       <div class="sk">XGBoost / ML <div class="sk-bar"><div class="sk-fill" data-width="72" data-color="orange"></div></div></div>
     </div>
 
     <div class="skill-col">
       <div class="skill-col-title" style="color:var(--accent2)">Frontend &amp; Tools</div>
-      <div class="sk">Next.js <div class="sk-bar"><div class="sk-fill" data-width="72" data-color="blue"></div></div></div>
-      <div class="sk">TypeScript <div class="sk-bar"><div class="sk-fill" data-width="68" data-color="blue"></div></div></div>
-      <div class="sk">React <div class="sk-bar"><div class="sk-fill" data-width="70" data-color="blue"></div></div></div>
+      <div class="sk">Next.js <div class="sk-bar"><div class="sk-fill" data-width="78" data-color="blue"></div></div></div>
+      <div class="sk">TypeScript <div class="sk-bar"><div class="sk-fill" data-width="74" data-color="blue"></div></div></div>
+      <div class="sk">React <div class="sk-bar"><div class="sk-fill" data-width="75" data-color="blue"></div></div></div>
       <div class="sk">Git / GitHub <div class="sk-bar"><div class="sk-fill" data-width="88" data-color="blue"></div></div></div>
       <div class="sk">Linux / Bash <div class="sk-bar"><div class="sk-fill" data-width="76" data-color="blue"></div></div></div>
       <div class="sk">C++ (DSA) <div class="sk-bar"><div class="sk-fill" data-width="74" data-color="blue"></div></div></div>
@@ -1331,31 +1354,25 @@
   </div>
 
   <div class="edu-card appear">
-    <div>
-      <div style="font-size:11px; color:var(--accent); letter-spacing:0.12em; text-transform:uppercase; margin-bottom:0.5rem;">2022 — 2026</div>
-      <div class="edu-school">NIT Karnataka</div>
-      <div class="edu-degree">B.Tech in Metallurgical &amp; Materials Engineering</div>
-      <div style="font-size:12.5px; color:var(--muted2); margin-top:0.5rem; max-width:500px;">
-        Core engineer with a CS passion. Self-taught backend development alongside
-        academic curriculum — built production systems while studying material science.
-      </div>
-      <div class="edu-tags">
-        <span class="edu-tag">Surathkal, Karnataka</span>
-        <span class="edu-tag">NIT System</span>
-        <span class="edu-tag">Pursuing Minor in CS</span>
-      </div>
+    <div style="font-size:11px; color:var(--accent); letter-spacing:0.12em; text-transform:uppercase; margin-bottom:0.5rem;">2023 — 2027</div>
+    <div class="edu-school">NIT Karnataka</div>
+    <div class="edu-degree">B.Tech · Metallurgical &amp; Materials Engineering · Pursuing Minor in CS</div>
+    <div style="font-size:12.5px; color:var(--muted2); margin-top:0.5rem; max-width:580px;">
+      Engineering fundamentals meet software systems. Self-taught full-stack development
+      alongside core curriculum — shipped production-grade projects while studying at NITK, Surathkal.
     </div>
-    <div class="edu-gpa">
-      <div class="gpa-val">7.83</div>
-      <div class="gpa-label">GPA / 10.0</div>
-      <div style="font-size:11px; color:var(--muted); margin-top:0.5rem;">5th Semester</div>
+    <div class="edu-tags">
+      <span class="edu-tag">Surathkal, Karnataka</span>
+      <span class="edu-tag">NIT System</span>
+      <span class="edu-tag">Minor in CS</span>
+      <span class="edu-tag">Full Stack</span>
     </div>
   </div>
 
   <div style="background:var(--bg2); border:1px solid var(--border); padding:1.25rem 1.5rem; font-size:12px; color:var(--muted2);">
     <span style="color:var(--accent2);">// </span>
-    Metallurgy → CS is not a bug, it's a feature. Engineering fundamentals +
-    software systems = rare combination that makes me think differently about problems.
+    Engineering fundamentals + software systems = a rare combination that makes me think
+    differently about architecture, tradeoffs, and system constraints.
   </div>
 </div>
 </div>
@@ -1374,14 +1391,15 @@
     <div class="appear">
       <h3 class="contact-heading">Let's<br>build<br><span class="acc">together.</span></h3>
       <p class="contact-sub">
-        Actively seeking <strong style="color:var(--text)">SDE internships</strong> and
+        Open to <strong style="color:var(--text)">SDE internships</strong>,
+        <strong style="color:var(--text)">full-time roles</strong>, and
         <strong style="color:var(--text)">PPO opportunities</strong> — both on-campus and off-campus.
-        Strong in backend engineering, system design, and Python ecosystems.
+        Strong in full-stack engineering, system design, and Python &amp; TypeScript ecosystems.
         Response time: within 24 hours.
       </p>
       <div class="badge" style="display:inline-flex;">
         <div class="badge-dot"></div>
-        Available immediately
+        Open to opportunities
       </div>
     </div>
 
@@ -1439,7 +1457,7 @@
 
 <div class="wrap">
 <div class="footer">
-  <span class="footer-text">© 2026 Raj Aryan · NIT Karnataka · Built with HTML &amp; obsession.</span>
+  <span class="footer-text">© 2027 Raj Aryan · NIT Karnataka · Built with HTML &amp; obsession.</span>
   <div class="status">
     <div class="sdot"></div>
     Open to opportunities
@@ -1461,7 +1479,6 @@ const obs = new IntersectionObserver((entries) => {
     if (!e.isIntersecting) return;
     e.target.classList.add('in');
 
-    /* Animate skill bars */
     if (e.target.id === 'skills-grid') {
       setTimeout(() => {
         document.querySelectorAll('.sk-fill').forEach(fill => {
@@ -1474,11 +1491,9 @@ const obs = new IntersectionObserver((entries) => {
       }, 200);
     }
 
-    /* Animate section lines */
     const line = e.target.querySelector('.sec-line');
     if (line) line.classList.add('in');
 
-    /* Animate counters */
     e.target.querySelectorAll('.counter[data-target]').forEach(el => {
       const target = parseInt(el.dataset.target);
       const dur = 1200;
