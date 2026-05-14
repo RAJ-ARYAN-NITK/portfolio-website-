@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
 <meta charset="UTF-8">
@@ -24,6 +24,7 @@
     --accent2: #3b9eff;
     --accent3: #ff6b35;
     --accent-amber: #ff9900;
+    --accent-teal: #00cfc0;
     --surface: rgba(255,255,255,0.03);
     --nav-bg: rgba(8,8,8,0.92);
     --card-bg: #080808;
@@ -45,6 +46,7 @@
     --accent2: #1a6ed8;
     --accent3: #d44a15;
     --accent-amber: #c47500;
+    --accent-teal: #009e94;
     --surface: rgba(0,0,0,0.04);
     --nav-bg: rgba(245,245,240,0.93);
     --card-bg: #f5f5f0;
@@ -541,6 +543,7 @@
   .proj-tag.blue { background: rgba(59,158,255,0.08); border-color: rgba(59,158,255,0.15); color: var(--accent2); }
   .proj-tag.orange { background: rgba(255,107,53,0.08); border-color: rgba(255,107,53,0.15); color: var(--accent3); }
   .proj-tag.purple { background: rgba(180,142,247,0.08); border-color: rgba(180,142,247,0.15); color: #b48ef7; }
+  .proj-tag.teal { background: rgba(0,207,192,0.08); border-color: rgba(0,207,192,0.18); color: var(--accent-teal); }
 
   .proj-name {
     font-family: 'Syne', sans-serif;
@@ -863,6 +866,27 @@
   }
   .info-bar svg { color: var(--accent); width: 18px; height: 18px; flex-shrink: 0; }
 
+  /* ── ASYNC LOGGER FEATURE BOX ── */
+  .async-features {
+    padding: 0.6rem 1rem;
+    background: rgba(0,207,192,0.04);
+    border: 1px solid rgba(0,207,192,0.15);
+    margin-bottom: 1rem;
+    font-size: 12px;
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+  .async-feat-item {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--muted2);
+  }
+  .async-feat-item svg { width: 12px; height: 12px; color: var(--accent-teal); flex-shrink: 0; }
+  .async-feat-item.primary { color: var(--accent-teal); }
+
   /* ── RESPONSIVE ── */
   @media (max-width: 900px) {
     .hero-inner { grid-template-columns: 1fr; gap: 3rem; }
@@ -897,6 +921,7 @@
     .footer { flex-direction: column; align-items: flex-start; }
     .contact-heading { font-size: 36px; }
     .proj-card { padding: 1.5rem; }
+    .async-features { gap: 0.75rem; }
   }
 </style>
 </head>
@@ -927,9 +952,7 @@
   </ul>
   <div class="nav-right">
     <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-      <!-- Sun icon (shown in dark mode) -->
       <svg id="iconSun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-      <!-- Moon icon (shown in light mode, hidden by default) -->
       <svg id="iconMoon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
     </button>
     <a href="mailto:rajaryan0734@gmail.com" class="nav-cta">
@@ -1237,6 +1260,58 @@
       </div>
     </div>
 
+    <!-- ── NEW: async-logger-cpp ── -->
+    <div class="proj-card appear">
+      <span class="proj-tag teal">
+        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        Systems Programming · C++17
+      </span>
+      <h3 class="proj-name">async-logger-cpp</h3>
+      <p class="proj-tagline" style="color: var(--accent-teal);">Thread-safe, lock-free async logging library for C++17.</p>
+      <p class="proj-desc">
+        A production-grade asynchronous logging library built on a lock-free MPSC
+        (Multi-Producer Single-Consumer) queue. Supports configurable sinks — file,
+        console, or custom — multiple log levels (DEBUG → FATAL), and a thread-safe
+        singleton API for zero-friction integration into any C++17 project.
+      </p>
+      <div class="async-features">
+        <div class="async-feat-item primary">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          Lock-free MPSC Queue
+        </div>
+        <div class="async-feat-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          Thread-safe Singleton
+        </div>
+        <div class="async-feat-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          Configurable Sinks
+        </div>
+        <div class="async-feat-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          5 Log Levels
+        </div>
+      </div>
+      <div class="stack">
+        <span class="chip"><i class="devicon-cplusplus-plain"></i>C++17</span>
+        <span class="chip">CMake</span>
+        <span class="chip">MPSC Queue</span>
+        <span class="chip">Atomics</span>
+        <span class="chip">Header-only</span>
+        <span class="chip">Multi-threading</span>
+      </div>
+      <div class="proj-links">
+        <a href="https://github.com/RAJ-ARYAN-NITK/async-logger-cpp" target="_blank" class="plink">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          GitHub
+        </a>
+        <a href="https://github.com/RAJ-ARYAN-NITK/async-logger-cpp#readme" target="_blank" class="plink">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          README
+        </a>
+      </div>
+    </div>
+
   </div>
 </div>
 </div>
@@ -1255,7 +1330,6 @@
   <div class="cp-grid stagger">
     <div class="cp-card">
       <div class="cp-icon cf">
-        <!-- Codeforces-style icon -->
         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5cadff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
       </div>
       <div style="flex:1">
@@ -1522,7 +1596,6 @@ function setTheme(theme) {
   }
 }
 
-// Init from storage
 const savedTheme = localStorage.getItem('theme') || 'dark';
 setTheme(savedTheme);
 
@@ -1548,10 +1621,6 @@ const obs = new IntersectionObserver((entries) => {
   entries.forEach(e => {
     if (!e.isIntersecting) return;
     e.target.classList.add('in');
-
-    if (e.target.id === 'skills-grid') {
-      // icons loaded via devicons, no bar animation needed
-    }
 
     const line = e.target.querySelector('.sec-line');
     if (line) line.classList.add('in');
